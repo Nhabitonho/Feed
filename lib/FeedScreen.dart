@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'FeedItem.dart';
@@ -34,11 +35,28 @@ class _FeedScreen extends State<FeedScreen> {
           //mainAxisAlignment: MainAxisAlignment.start,
           //mainAxisSize: MainAxisSize.max,
           children: [
-            Row(),
             Row(
               children: [
                 Container(
-                    margin: EdgeInsets.only( top: 40.0, left: 25.0,),
+                    margin: EdgeInsets.only( top: 40.0, left: 170.0,right: 100.0),
+                    child: Align(
+                    alignment: Alignment.center,
+                    child: Text(
+                      'FEED',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  )
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Container(
+                    margin: EdgeInsets.only( top: 20.0, left: 25.0,),
                     child: Align(
                   alignment: Alignment(-0.85, 0.5),
                   child: Text(
@@ -73,7 +91,7 @@ class _FeedScreen extends State<FeedScreen> {
               children: [
                 Expanded(
                   child: Container(
-                    //margin: EdgeInsets.only(left: 5.0),
+                    margin: EdgeInsets.only(top: 5.0),
                     decoration: new BoxDecoration(color: Colors.white),
                     height: 240,
                     child: Stack(
